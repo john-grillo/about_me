@@ -1,4 +1,14 @@
 'use strict';
+
+
+
+
+
+
+
+
+
+
 console.log('Hello from app2.js!');
 //var NULL = null;
 String.prototype.wordSearch = function(arg) {
@@ -8,6 +18,8 @@ String.prototype.wordSearch = function(arg) {
 var answerCount = 0;
 
 //first question bloc
+
+function firstQuestion() {
 var firstQ = prompt("Do you like icecream? Type 'Y/N' or 'YES/NO' ").toLowerCase();
 console.log(firstQ);
 console.log( (firstQ === ('yes' || 'y') ) );
@@ -23,9 +35,14 @@ else {
 }
 console.log("John Grillo's favorite flavor is Chocolate Mudslide from the Tillamook Cheese factory");
 console.log("User answered with: " + firstQ);
+};
+
+firstQuestion();
 
 //2nd question block
-var secondQ = prompt("But seriously, what is John Grillo's favorite Laika film?");
+
+
+function secondQuestion() { var secondQ = prompt("But seriously, what is John Grillo's favorite Laika film?");
 console.log("User answered with: " + secondQ);
 if (secondQ.wordSearch("kubo") >= 0) {
   alert('Good, you paid attention. Have a victory point!');
@@ -37,10 +54,13 @@ else if (secondQ == -1) {
 else {
    alert("Gordon Bennet, that's not the right answer!");
 }
+// end of function
+}
 
+secondQuestion();
 
 //third question bloc
-var thirdQ = prompt('So who another superhero that John Grillo likes?');
+function thirdQuestion() { var thirdQ = prompt('So who another superhero that John Grillo likes?');
 console.log("User answered with: " + thirdQ);
 console.log(thirdQ.wordSearch('mr. miracle'));
 if (thirdQ.wordSearch('mr. miracle') >= 0 ) {
@@ -49,9 +69,16 @@ if (thirdQ.wordSearch('mr. miracle') >= 0 ) {
 } else {
   alert('No, ' + thirdQ + ' does not need a movie.');
 }
+// end of function
+};
+
+thirdQuestion();
+
+
+
 
 //fourth question bloc
-var fourthQ = prompt('What country in Africa has John Grillo been to?');
+function fourthQuestion() { var fourthQ = prompt('What country in Africa has John Grillo been to?');
 console.log("User answered with: " + fourthQ);
 if (fourthQ.wordSearch('egypt') >= 0 ) {
   alert('Good catch! Not a lot of people think of Egypt as an African country.');
@@ -59,11 +86,15 @@ if (fourthQ.wordSearch('egypt') >= 0 ) {
 } else {
   alert('Buyao. It was Egypt.');
 }
+// end of function
+}
+
+fourthQuestion();
 
 // fifth question bloc -- changed on 11/10/16 to be only allow 4 tries.
 // User guesses a number between one and 10.
 
-var attempts = 1;
+function fifthQuestion() { var attempts = 1;
 console.log("User has started guessing game; must guess between 1 and 10, inclusive");
 while ( attempts < 5 ) {
   var fifthQ = prompt("Ahoy there! You have started the number guessing game. Must guess a number between 1 and 10, inclusive. Oh, and you only have 4 attempts.");
@@ -90,10 +121,15 @@ while ( attempts < 5 ) {
 
 //end of while loop
 }
+// end of function
+}
+
+fifthQuestion();
 
 
 // Sixth question bloc
-var sixthQ = prompt("Does John duel with lightsabers? Type 'Y/N' or 'YES/NO' ").toLowerCase();
+
+function sixthQuestion() { var sixthQ = prompt("Does John duel with lightsabers? Type 'Y/N' or 'YES/NO' ").toLowerCase();
 console.log(sixthQ);
 if (sixthQ === 'yes' || sixthQ === 'y') {
   alert('Yes. He makes videos with his friends, too. Have a victory point.');
@@ -107,8 +143,14 @@ else {
 }
 console.log("John Grillo does, but he does not own his own");
 console.log("User answered with: " + sixthQ);
+// end of function
+}
 
-var sevenQ = prompt("Does John look fresh? Type 'Y/N' or 'YES/NO' ").toLowerCase();
+sixthQuestion();
+
+
+
+function seventhQuestion() { var sevenQ = prompt("Does John look fresh? Type 'Y/N' or 'YES/NO' ").toLowerCase();
 if (sevenQ === 'yes' || sevenQ === 'y') {
   alert('Yes. Yes he does. Take a point and stay fresh.');
   answerCount += 1;
@@ -121,9 +163,16 @@ else {
 }
 console.log("John Grillo does, indeed, look fresh.");
 console.log("User answered with: " + sevenQ);
+// end of function
+}
+
+seventhQuestion();
+
 
 //this is the array question. Eigth question bloc
-var arrayAns = ['canada', 'mexico', 'japan', 'china', 'egypt', 'usa'];
+
+
+function eightQuestion() {  var arrayAns = ['canada', 'mexico', 'japan', 'china', 'egypt', 'usa'];
 var arrayLength = arrayAns.length;
 var eightQ = prompt("John Grillo lists a few countries he has been to. Can you name one of them? Oh, and spelling counts").toLowerCase();
 for(var index = 0; index <= arrayLength; index++) {
@@ -141,8 +190,14 @@ for(var index = 0; index <= arrayLength; index++) {
 
 //end of for loop
 }
+// end of function
+}
+
+eightQuestion();
 
 //ninth question
+
+function nineQuestion() {
 var nineQ= prompt("Does John Grillo have a bachelor's degree? Type 'Y/N' or 'YES/NO' ").toLowerCase();
 if (nineQ === 'yes' || nineQ === 'y') {
   alert('Yes. Yes he does. Most people can not read past "AAS".');
@@ -157,8 +212,12 @@ else {
   alert("Oh my god, what is this, I don't even...");
   console.log("user gave invalid input.");
 }
+// end of function
+}
+nineQuestion();
 
-//ninth question
+//tenth question
+function tenQuestion() {
 var tenQ = prompt("Is John Grillo willing to relocate for work? Type 'Y/N' or 'YES/NO' ").toLowerCase();
 if (tenQ === 'yes' || tenQ === 'y') {
   alert('Yes. "Have gun, will travel" is his motto And he can work remotely!');
@@ -172,20 +231,29 @@ else {
 }
 console.log("John Grillo does, indeed, look fresh.");
 console.log("User answered with: " + tenQ);
+// end of function
+};
 
-//scorecard
-alert("Ok, now we are tallying up your score.");
-console.log("Tallying score right now.");
-if (answerCount >= 9) {
-  alert("Fantastic job! Your ability to read comprehensively puts you ahead of the average employer!");
-  console.log("User scored above average at: " + answerCount);
-} else if (answerCount >= 6) {
-  alert("Great job. Have a cookie. You earned it. You got " + answerCount);
-  console.log("User scored above average at: " + answerCount);
-} else if (answerCount < 5 || answerCount > 3) {
-  alert("You choose poorly. Your score was" + answerCount);
-  console.log("User scored: ", answerCount);
-} else {
-  alert("Feel free to read the answers and then try again. Your score was " + answerCount);
-  console.log("User scored below average at: " + answerCount);
+tenQuestion();
+
+
+function scorecard() {
+  //scorecard
+  alert("Ok, now we are tallying up your score.");
+  console.log("Tallying score right now.");
+  if (answerCount >= 9) {
+    alert("Fantastic job! Your ability to read comprehensively puts you ahead of the average employer!");
+    console.log("User scored above average at: " + answerCount);
+  } else if (answerCount >= 6) {
+    alert("Great job. Have a cookie. You earned it. You got " + answerCount);
+    console.log("User scored above average at: " + answerCount);
+  } else if (answerCount < 5 || answerCount > 3) {
+    alert("You choose poorly. Your score was" + answerCount);
+    console.log("User scored: ", answerCount);
+  } else {
+    alert("Feel free to read the answers and then try again. Your score was " + answerCount);
+    console.log("User scored below average at: " + answerCount);
+  }
 }
+
+scorecard();
