@@ -16,7 +16,7 @@ main {
 
 section {
   float: left;
-  background-color: #246;
+  background-color: #f4d442;
   width: 33%;
 }
 
@@ -53,7 +53,21 @@ article p:hover {
   font-style: underline;
 }
 
-.answers {
+#answers {
+  font-weight: bold;
+  font-style: underline;
+  line-height: 200%;
+}
+
+#answers:hover {
+  background-color: lime;
+}
+
+#answers li:hover {
+  background-color: goldenrod;
+}
+
+#playerResults {
   
 }
 
