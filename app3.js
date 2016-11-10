@@ -70,11 +70,12 @@ do {
 
 // Sixth question bloc
 var sixthQ = prompt("Does John duel with lightsabers? Type 'Y/N' or 'YES/NO' ").toLowerCase();
+console.log(sixthQ);
 if (sixthQ === 'yes' || sixthQ === 'y') {
   alert('Yes. He makes videos with his friends, too.');
 }
 else if (sixthQ === 'n' || sixthQ === 'no') {
-  alert("Actually, he does");
+  alert("Actually, he does enjoy lightsaber battles");
 }
 else {
   alert("Oh my god, what is this, I don't even...");
